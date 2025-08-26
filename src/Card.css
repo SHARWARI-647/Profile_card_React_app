@@ -1,155 +1,127 @@
-/* ---------- CARD CONTAINER ---------- */
+
 .card {
+  background: rgba(44, 62, 80, 0.8);
+  backdrop-filter: blur(10px);
   padding: 25px;
   margin: 20px auto;
   width: 340px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
   text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-  background: #ffffff;
-  overflow: hidden;
+  border: 2px solid #f1c40f;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ---------- PROFILE IMAGE ---------- */
 .profile-pic {
   width: 160px;
   height: 160px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 15px;
-  border: 3px solid #f0f0f0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 3px solid #f1c40f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* ---------- NAME ---------- */
 .card h2 {
   margin: 8px 0;
   font-size: 22px;
   font-weight: 700;
-  color: #1c1c1c;
+  color: #ecf0f1;
 }
 
-/* ---------- BIO FIELDSET ---------- */
 .card fieldset {
-  border: 1px solid #ddd;
+  border: 1px solid #f1c40f;
   border-radius: 8px;
   margin: 15px 0;
   padding: 10px;
-  background-color: rgba(240, 240, 240, 0.4);
+  background-color: rgba(52, 73, 94, 0.2);
 }
 
 .card legend {
   font-weight: 600;
   padding: 0 8px;
   font-size: 14px;
-  color: #555;
+  color: #ecf0f1;
 }
 
 .card p {
   font-size: 14px;
-  color: #444;
+  color: #bdc3c7;
   line-height: 1.4;
   margin: 0;
 }
 
-/* ---------- INFO ROWS ---------- */
-.card-info {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 10px;
-}
-
 .card-info h4 {
   font-size: 15px;
-  color: #222;
+  color: #ecf0f1;
   display: flex;
-  align-items: center;  /* Align icon + text vertically */
-  justify-content: flex-start; /* Align left */
-  gap: 10px; /* Space between icon and text */
-  background: rgba(240, 240, 240, 0.5);
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background: rgba(52, 73, 94, 0.2);
   padding: 6px 10px;
   border-radius: 6px;
 }
 
 .card-info h4 img {
-  width: 24px; /* Same size for all icons */
+  width: 24px;
   height: 24px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
-/* ---------- DOWNLOAD BUTTON ---------- */
 .download-btn {
   margin-top: 16px;
   padding: 10px 18px;
   font-size: 15px;
   font-weight: 500;
-  background: linear-gradient(135deg, #2196f3, #1e88e5);
-  color: white;
+  background: #f1c40f;
+  color: #2c3e50;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease;
 }
 
 .download-btn:hover {
-  background: linear-gradient(135deg, #1976d2, #1565c0);
-  transform: translateY(-2px);
+  background: #ffd700;
 }
 
-/* ---------- TEMPLATE STYLES ---------- */
 .template-classic {
-  background: #fffaf0;
-  border: 1px solid #d4af7f;
-  color: #333;
+  background: rgba(49, 69, 89, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid #f1c40f;
 }
 
 .template-modern {
-  background: linear-gradient(120deg, #fefefe, #e3f2fd);
-  border: 1px solid #2196f3;
-  color: #0d47a1;
+  background: rgba(52, 73, 94, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid #f1c40f;
 }
 
 .template-neon {
-  background: linear-gradient(145deg, #1a1a1a, #000);
-  color: #ecf3f2;
-  border: 1px solid #00ffc8;
-  font-family: 'Courier New', monospace;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 2px solid #00ffc8;
 }
 
 .template-glass {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.25);
 }
 
 .template-gradient {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #ffffff;
+  background: linear-gradient(135deg, #864ac6, #4975c0);
   border: none;
 }
 
 .template-shadowed {
-  background: #2c3e50;
-  color: #ecf0f1;
-  border: 1px solid #34495e;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  background: rgba(44, 62, 80, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid #34495e;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 420px) {
-  .card {
-    width: 90%;
-    padding: 20px;
-  }
-}
