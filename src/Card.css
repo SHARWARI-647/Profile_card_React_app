@@ -1,101 +1,155 @@
-/* Basic Card Layout */
+/* ---------- CARD CONTAINER ---------- */
 .card {
-  padding: 20px;
+  padding: 25px;
   margin: 20px auto;
-  width: 320px;
+  width: 340px;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom right, #ffffff, #f4f6f8);
+  background: #ffffff;
   overflow: hidden;
 }
 
 .card:hover {
-  transform: scale(1.04);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
 }
 
-.card img {
-  width: 100%;
-  height: 180px;
+/* ---------- PROFILE IMAGE ---------- */
+.profile-pic {
+  width: 160px;
+  height: 160px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 50%;
   margin-bottom: 15px;
-  border: 2px solid #eee;
+  border: 3px solid #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* ---------- NAME ---------- */
 .card h2 {
-  margin: 10px 0;
+  margin: 8px 0;
   font-size: 22px;
-  font-weight: 600;
-  color: #2c3e50;
+  font-weight: 700;
+  color: #1c1c1c;
 }
 
-.card p {
-  margin: 5px 0;
-  font-size: 15px;
+/* ---------- BIO FIELDSET ---------- */
+.card fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 15px 0;
+  padding: 10px;
+  background-color: rgba(240, 240, 240, 0.4);
+}
+
+.card legend {
+  font-weight: 600;
+  padding: 0 8px;
+  font-size: 14px;
   color: #555;
 }
 
+.card p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ---------- INFO ROWS ---------- */
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.card-info h4 {
+  font-size: 15px;
+  color: #222;
+  display: flex;
+  align-items: center;  /* Align icon + text vertically */
+  justify-content: flex-start; /* Align left */
+  gap: 10px; /* Space between icon and text */
+  background: rgba(240, 240, 240, 0.5);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.card-info h4 img {
+  width: 24px; /* Same size for all icons */
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ---------- DOWNLOAD BUTTON ---------- */
 .download-btn {
   margin-top: 16px;
-  padding: 10px 16px;
+  padding: 10px 18px;
   font-size: 15px;
+  font-weight: 500;
   background: linear-gradient(135deg, #2196f3, #1e88e5);
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .download-btn:hover {
   background: linear-gradient(135deg, #1976d2, #1565c0);
+  transform: translateY(-2px);
 }
-/* CLASSIC */
+
+/* ---------- TEMPLATE STYLES ---------- */
 .template-classic {
   background: #fffaf0;
-  border: 2px solid #d4af7f;
+  border: 1px solid #d4af7f;
   color: #333;
 }
 
-/* MODERN */
 .template-modern {
-  background: linear-gradient(120deg, #e3f2fd, #fefefe);
-  border: 2px solid #2196f3;
+  background: linear-gradient(120deg, #fefefe, #e3f2fd);
+  border: 1px solid #2196f3;
   color: #0d47a1;
 }
 
-/* NEON */
 .template-neon {
   background: linear-gradient(145deg, #1a1a1a, #000);
-  color: #00ffea;
-  border: 2px solid #00ffc8;
+  color: #ecf3f2;
+  border: 1px solid #00ffc8;
   font-family: 'Courier New', monospace;
 }
 
-/* GLASS EFFECT */
 .template-glass {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
   color: #ffffff;
 }
 
-/* GRADIENT COLORFUL */
 .template-gradient {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #ffffff;
   border: none;
 }
 
-/* SHADOWED DARK */
 .template-shadowed {
   background: #2c3e50;
   color: #ecf0f1;
   border: 1px solid #34495e;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 420px) {
+  .card {
+    width: 90%;
+    padding: 20px;
+  }
 }
